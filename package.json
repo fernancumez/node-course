@@ -1,0 +1,29 @@
+{
+  "name": "node-course",
+  "version": "1.0.0",
+  "main": "index.js",
+  "homepage": "https://github.com/fernancumez/node-course#readme",
+  "description": "",
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "nodemon dist/app.js"
+  },
+  "keywords": [],
+  "author": "fernancumez",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/faker": "5.1.5",
+    "@types/node": "14.14.17",
+    "faker": "5.1.0",
+    "nodemon": "2.0.6",
+    "ts-node": "9.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernancumez/node-course.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fernancumez/node-course/issues"
+  }
+}
