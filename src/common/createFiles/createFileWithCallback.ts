@@ -7,7 +7,10 @@ export const createFileCallback = (
   contentFile: string
 ) => {
   fs.writeFile(
-    path.join(__dirname, path.join(`../functions/${outputNameDir}`, fileName)),
+    path.join(
+      __dirname,
+      path.join(`../../functions/${outputNameDir}`, fileName)
+    ),
 
     contentFile,
     (err: NodeJS.ErrnoException | null) => {
