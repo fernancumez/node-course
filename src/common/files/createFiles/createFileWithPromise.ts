@@ -10,7 +10,7 @@ export const createFilePromise = async (
   try {
     const filePath = path.join(
       __dirname,
-      path.join(`../../functions/${outputNameDir}`, fileName)
+      path.join(`../../../topics/files/${outputNameDir}`, fileName)
     );
 
     await fs.promises.writeFile(filePath, contentFile);

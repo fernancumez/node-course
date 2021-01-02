@@ -8,7 +8,7 @@ export const readFileCallback = (
 ): void => {
   let filePath = path.join(
     __dirname,
-    path.join(`../../functions/${outputNameDir}`, fileName)
+    path.join(`../../../topics/files/${outputNameDir}`, fileName)
   );
 
   fs.readFile(filePath, (err: NodeJS.ErrnoException | null, data: Buffer) => {

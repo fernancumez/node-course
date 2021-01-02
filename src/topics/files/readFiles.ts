@@ -1,17 +1,17 @@
-import { verifyFilesAndDirectories } from "../common/verifyFilesAndDirectories";
-import { readFilePromise } from "../common/readFiles/readFileWithPromise";
-import { readFileCallback } from "../common/readFiles/readFileWithCallback";
-import { outputNameDir } from "../constants";
+import { verifyFilesAndDirectories } from "../../common/files/verifyFilesAndDirectories";
+import { readFilePromise } from "../../common/files/readFiles/readFileWithPromise";
+import { readFileCallback } from "../../common/files/readFiles/readFileWithCallback";
+import { outputNameDir } from "../../constants";
 
-// Read file with promises
+// Read file with promises / async await
 export const readFileWithPromise = async (fileName: string): Promise<void> => {
   try {
     const isDirectoryExist: boolean = await verifyFilesAndDirectories(
-      `../functions/${outputNameDir}`
+      `../../topics/files/${outputNameDir}`
     );
 
     const isFileExist: boolean = await verifyFilesAndDirectories(
-      `../functions/${outputNameDir}/${fileName}`
+      `../../topics/files/${outputNameDir}/${fileName}`
     );
 
     // Check if the directory and file exists
@@ -24,12 +24,14 @@ export const readFileWithPromise = async (fileName: string): Promise<void> => {
   }
 };
 
-// Read file with callback
+// Read file with callback and promise hell
 export const readFileWithCallback = (fileName: string) => {
-  verifyFilesAndDirectories(`../functions/${outputNameDir}`)
+  verifyFilesAndDirectories(`../../topics/files/${outputNameDir}`)
     .then((isDirectoryExist) => {
       if (isDirectoryExist)
-        verifyFilesAndDirectories(`../functions/${outputNameDir}/${fileName}`)
+        verifyFilesAndDirectories(
+          `../../topics/files/${outputNameDir}/${fileName}`
+        )
           .then((isFileExist) => {
             if (isFileExist) readFileCallback(outputNameDir, fileName);
           })

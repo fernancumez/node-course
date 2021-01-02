@@ -9,7 +9,7 @@ export const readFilePromise = async (
   try {
     let filePath = path.join(
       __dirname,
-      path.join(`../../functions/${outputNameDir}`, fileName)
+      path.join(`../../../topics/files/${outputNameDir}`, fileName)
     );
 
     const data: Buffer = await fs.promises.readFile(filePath);

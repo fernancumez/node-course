@@ -1,13 +1,13 @@
 import {
   createFileWithCallback,
   createFileWithPromise,
-} from "./functions/createFiles";
+} from "./topics/files/createFiles";
 import {
   readFileWithPromise,
   readFileWithCallback,
-} from "./functions/readFiles";
+} from "./topics/files/readFiles";
 
-import { data } from "./common/data";
+import { data } from "./common/files/dataFiles";
 
 const main = async (): Promise<void> => {
   try {

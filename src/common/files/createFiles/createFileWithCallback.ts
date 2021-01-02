@@ -9,7 +9,7 @@ export const createFileCallback = (
   fs.writeFile(
     path.join(
       __dirname,
-      path.join(`../../functions/${outputNameDir}`, fileName)
+      path.join(`../../../topics/files/${outputNameDir}`, fileName)
     ),
 
     contentFile,
