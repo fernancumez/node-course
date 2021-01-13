@@ -1,25 +1,13 @@
-import {
-  createFileWithCallback,
-  createFileWithPromise,
-} from "./topics/files/createFiles";
-import {
-  readFileWithPromise,
-  readFileWithCallback,
-} from "./topics/files/readFiles";
-
-import { data } from "./common/files/dataFiles";
+import { fileSystem } from "./topics/files";
+import { workingWithClasses } from "./topics/classes";
 
 const main = async (): Promise<void> => {
   try {
-    let contentFile: string = JSON.stringify(data);
+    // Topic 1: Working with file system
+    await fileSystem();
 
-    // Create files with promises and callbacks
-    await createFileWithPromise("dataPromise.txt", contentFile);
-    createFileWithCallback("dataCallback.txt", contentFile);
-
-    // Read files with promises and callbacks
-    await readFileWithPromise("dataPromise.txt");
-    readFileWithCallback("dataCallback.txt");
+    // Topic 2: Working with object oriented programming
+    workingWithClasses();
   } catch (error) {
     console.error(error);
   }
