@@ -1,12 +1,14 @@
-import { Greeter } from "./ConstructorFunctions";
+import { Animal, Horse, Snake } from "./Animals";
+import { Greeter } from "./Greeter";
 
-export const workingWithClasses = () => {
-  const greeter: Greeter = new Greeter();
-  console.log(greeter.greet());
+const workingWithClasses = () => {
+  const greeter: Greeter = new Greeter("fernando");
+  const sam: Snake = new Snake("Sammy the python");
+  const tom: Animal = new Horse("Tommy the palomino");
 
-  const greeterMaker: typeof Greeter = Greeter;
-  greeterMaker.standardGreeting = "Hey There!";
-
-  let greeter2: Greeter = new greeterMaker();
-  console.log(greeter2.greet());
+  greeter.greet();
+  sam.move();
+  tom.move(34);
 };
+
+workingWithClasses();

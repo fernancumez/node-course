@@ -9,7 +9,7 @@ import {
 
 import { data } from "./dataFiles";
 
-export const fileSystem = async (): Promise<void> => {
+const fileSystem = async (): Promise<void> => {
   try {
     let contentFile: string = JSON.stringify(data);
 
@@ -24,3 +24,5 @@ export const fileSystem = async (): Promise<void> => {
     console.error(error);
   }
 };
+
+fileSystem();
