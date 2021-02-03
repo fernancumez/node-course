@@ -55,8 +55,9 @@ npm install
 
 ## Usage
 
-- Run the application `npm run start`
-- Run `npm run watch` and `npm run dev` for development mode
+- Run `npm run watch` for compilation mode
+- Run `npm run files`
+- Run `npm run classes`
 
 <!--LICENSE-->
 
