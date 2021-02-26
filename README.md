@@ -58,6 +58,7 @@ npm install
 - Run `npm run watch` for compilation mode
 - Run `npm run files`
 - Run `npm run classes`
+- Run `npm run promises`
 
 <!--LICENSE-->
 

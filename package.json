@@ -7,7 +7,8 @@
   "scripts": {
     "watch": "tsc -w",
     "files": "nodemon dist/topics/files/index.js",
-    "classes": "nodemon dist/topics/classes/index.js"
+    "classes": "nodemon dist/topics/classes/index.js",
+    "promises": "nodemon dist/topics/promises/index.js"
   },
   "keywords": [],
   "author": "fernancumez",
